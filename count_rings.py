@@ -12,3 +12,4 @@ def count_rings(array):
 		if array[i] == 1 and array[i+1] == 0:
 			count = count + 1
 	return count
+

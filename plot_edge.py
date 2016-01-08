@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 from edge_detection import detect_edge
 
-def plot_edge(im,sigma=1,high_threshold,low_threshold):
+def plot_edge(im,sigma=1,high_threshold=None,low_threshold=None):
     '''
     Plots original image and edge image next to each other.
     
@@ -16,11 +16,11 @@ def plot_edge(im,sigma=1,high_threshold,low_threshold):
 
     edges = detect_edge(im,sigma,high_threshold,low_threshold)
     
-
+    
     fig, axes = plt.subplots(nrows=1, ncols=2)
     ax_orig = axes[0]
     ax_edges = axes[1]
-    ax_orig.imshow(image_in)
+    ax_orig.imshow(im)
     ax_edges.imshow(edges)
     fig.show()
 
@@ -32,4 +32,3 @@ def plot_edge(im,sigma=1,high_threshold,low_threshold):
 #    ax2.imshow(edges)
     
 #    fig.tight_layout()
-#    fig, axes = plt.subplots(nrows=1, ncols=2)
